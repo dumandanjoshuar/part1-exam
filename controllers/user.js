@@ -33,12 +33,17 @@ module.exports.registerUser = async (req, res) => {
                 message: "New user has been registered",
                 user: newUser
             })
+        } else {
+            return res.status(400).json({
+                error: "Invalid password. Password must contain at least 8 characters, including a letter and a number"
+            })
         }
         
     } catch (error) {
-        console.log({
-            error: error.message
-        })
+        console.error("Error during user registration:", error);
+        return res.status(500).json({
+            error: "Internal Server Error"
+        });
     }
 }
 

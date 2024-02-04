@@ -1,6 +1,5 @@
 const { registerUser } = require('../user');
-const User = require('../../models/User');
-const { validatePassword } = require('../validatePassword');
+const User = require('../../models/User')
 
 const request = {
   body: {
