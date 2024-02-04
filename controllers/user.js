@@ -40,10 +40,9 @@ module.exports.registerUser = async (req, res) => {
         }
         
     } catch (error) {
-        console.error("Error during user registration:", error);
-        return res.status(500).json({
-            error: "Internal Server Error"
-        });
+        console.log({
+            error: error.message
+        })
     }
 }
 
