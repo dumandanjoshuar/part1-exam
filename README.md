@@ -6,6 +6,12 @@ To install the required dependencies, use the following command:
 npm install
 ```
 
+To test:
+
+```bash
+npm test
+```
+
 ## ROUTES:
 - **User registration (POST)**
 	- Endpoint: http://localhost:4002/users/register
